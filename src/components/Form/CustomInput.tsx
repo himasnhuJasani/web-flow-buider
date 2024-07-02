@@ -62,7 +62,7 @@ const DynamicInput: React.FC<InputProps> = (props) => {
 					/>
 					<label
 						htmlFor="file-input"
-						className="bg-input-bg hover:bg-secondary hover-transition text-font-color p-3 cursor-pointer"
+						className="bg-input-bg hover:bg-secondary text-font-color p-3 cursor-pointer"
 					>
 						{props.label}
 					</label>

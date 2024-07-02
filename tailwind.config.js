@@ -4,20 +4,17 @@ module.exports = {
 	theme: {
 		extend: {
 			colors: {
-				primary: '#1a192b',
-				secondary: '#4C497E',
-				tertiary: '#4C497E',
+				primary: '#2d2c3a',
+				secondary: '#847fdf',
+				tertiary: '#c9c8dd',
 				background: '#222138',
 				'border-color': '#333154',
 				'font-color': '#f8f8f2',
 				'input-bg': 'rgba(255, 255, 255, 0.08)',
 				'workflow-color': '#6866ac',
 			},
-			transitionProperty: {
-				'hover-transition': 'transition duration-300 ease-in-out',
-			},
 			fontFamily: {
-				sans: ['IBM Plex Sans', 'system-ui', 'sans-serif'],
+				sans: ['system-ui', 'sans-serif'],
 			},
 		},
 	},

@@ -1,6 +1,6 @@
 import Button from "components/Button";
-import DynamicInput from "components/Form/DynamicInput";
-import { Conditions, conditionOptions } from "constants/conditionConstant";
+import DynamicInput from "components/Form/CustomInput";
+// import { Conditions, conditionOptions } from "constants/conditionConstant";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Handle, Position, useUpdateNodeInternals } from "reactflow";
@@ -12,7 +12,7 @@ import {
 } from "store/nodeSlice";
 import { RootState } from "store/store";
 import { TableRow } from "store/workflowSlice";
-import { findDeepestData } from "utils/findDeepData";
+import { findNestedData } from "utils/findNestedData";
 import { fileNodeStyle, targetStyle } from "./style";
 
 interface ColumnOption {
@@ -46,11 +46,23 @@ const FilterNode = ({ data, ...res }: any) => {
     dispatch(removeNode(currentNode.id));
   };
 
-  useEffect(() => {
-    const deepData = findDeepestData(data);
+  enum Conditions {
+    IS_EQUAL = 'is equal',
+    IS_NOT_EQUAL_TO = 'is not equal to',
+    INCLUDES = 'includes',
+    DOES_NOT_INCLUDE = 'does not include',
+  }
 
-    if (deepData.length > 0) {
-      const firstRow = deepData[0];
+  const conditionOptions = Object.values(Conditions).map((condition) => ({
+    value: condition,
+    label: condition,
+  }));
+
+  useEffect(() => {
+    const nestedData = findNestedData(data);
+
+    if (nestedData.length > 0) {
+      const firstRow = nestedData[0];
       const columnNames = Object.keys(firstRow);
       const formattedColumns = columnNames.map((column) => ({
         value: column,
@@ -71,8 +83,8 @@ const FilterNode = ({ data, ...res }: any) => {
       column: value,
     }));
 
-    const deepData = findDeepestData(data);
-    const columnValues = deepData.map((row: any) => row[value]);
+    const nestedData = findNestedData(data);
+    const columnValues = nestedData.map((row: any) => row[value]);
     const uniqueValues = Array.from(new Set(columnValues));
     const formattedValues = uniqueValues.map((val) => ({
       value: val as string,
@@ -131,9 +143,9 @@ const FilterNode = ({ data, ...res }: any) => {
       }
     });
     if (hasError) return;
-    const deepData = findDeepestData(data);
-    if (!deepData.length) return;
-    let filteredData = deepData.filter((row: any) => {
+    const nestedData = findNestedData(data);
+    if (!nestedData.length) return;
+    let filteredData = nestedData.filter((row: any) => {
       let isFiltered = true;
       allFilters.forEach(({ column, condition, value }) => {
         switch (condition) {

@@ -1,7 +1,7 @@
 import React, { ChangeEvent } from "react";
 import { parse } from "csv-parse/browser/esm/sync";
 import { useDispatch, useSelector } from "react-redux";
-import DynamicInput from "./DynamicInput";
+import DynamicInput from "./CustomInput";
 import { RootState } from "store/store";
 import {
   removeNodeData,
@@ -10,7 +10,7 @@ import {
 } from "store/nodeSlice";
 import Button from "components/Button";
 
-const CsvFileSelectInput = ({ id }: { id?: string }) => {
+const CsvInput = ({ id }: { id?: string }) => {
   const dispatch = useDispatch();
 
   const selectedNode = useSelector(
@@ -82,4 +82,4 @@ const CsvFileSelectInput = ({ id }: { id?: string }) => {
   );
 };
 
-export default CsvFileSelectInput;
+export default CsvInput;

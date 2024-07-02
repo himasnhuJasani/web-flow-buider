@@ -111,9 +111,9 @@ const workflowSlice = createSlice({
       action: PayloadAction<{ id: string; name: string }>
     ) => {
       const { id, name } = action.payload;
-      const updatedWorkflows = state.workflows.map((workflow) =>
-        workflow.id === id ? { ...workflow, name } : workflow
-      );
+      // const updatedWorkflows = state.workflows.map((workflow) =>
+      //   workflow.id === id ? { ...workflow, name } : workflow
+      // );
       const workflowId = action.payload.id;
       const workflowName = action.payload.name;
       const workflowKey = `workflow-${workflowId}`;
@@ -139,9 +139,9 @@ const workflowSlice = createSlice({
       state.workflows = state.workflows.filter(
         (workflow) => workflow.id !== workflowId
       );
-      const updatedWorkflow = {
-        ...state.workflows,
-      };
+      // const updatedWorkflow = {
+      //   ...state.workflows,
+      // };
       localStorage.removeItem(workflowKey);
     },
   },

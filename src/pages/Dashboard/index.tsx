@@ -1,7 +1,7 @@
-import React, { useEffect, useLayoutEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import "./DashboardStyle.css";
 import Button from "components/Button";
-import DynamicInput from "components/Form/DynamicInput";
+import DynamicInput from "components/Form/CustomInput";
 
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "store/store";
@@ -117,7 +117,7 @@ const Dashboard = () => {
           error={error}
           placeholder="New Workflow Name"
           value={newWorkflowName}
-          onChange={(e) => {
+          onChange={(e: any) => {
             setNewWorkflowName(e.target.value);
           }}
           onKeyDown={handleKeyDown}

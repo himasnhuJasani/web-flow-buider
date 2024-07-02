@@ -33,7 +33,7 @@ const SidePanel = () => {
       </div>
 
       <div className="flex flex-col gap-5 border border-border-color p-3">
-        <h4 className="text-lg">Transformer Nodes</h4>
+        <h4 className="text-lg">Transformer Block</h4>
         <div className="flex flex-col gap-5">
           <Button
             className="text-left"

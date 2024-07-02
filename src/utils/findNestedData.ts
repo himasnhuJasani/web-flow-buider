@@ -1,6 +1,6 @@
-export const findDeepestData = (obj: any): any => {
+export const findNestedData = (obj: any): any => {
   if (obj && typeof obj === "object" && "data" in obj) {
-    return findDeepestData(obj.data);
+    return findNestedData(obj.data);
   }
   return obj;
 };

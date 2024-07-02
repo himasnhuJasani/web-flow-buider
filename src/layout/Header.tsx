@@ -33,12 +33,12 @@ const Header = () => {
               Home
             </Button>
           </li>
-          {/* <li>
+          <li>
 						<Button>VIEW</Button>
 					</li>
 					<li>
 						<Button>HELP</Button>
-					</li> */}
+					</li>
         </ul>
       </div>
       {params.workflowId && (

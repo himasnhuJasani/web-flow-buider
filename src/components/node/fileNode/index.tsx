@@ -1,17 +1,11 @@
 import Button from 'components/Button';
-import CsvFileSelectInput from 'components/Form/CsvFileSelectInput';
+import CsvFileSelectInput from 'components/Form/CsvInput';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { Handle, Position, useUpdateNodeInternals } from 'reactflow';
 import { removeNode } from 'store/nodeSlice';
-const handleStyle = {
-	height: '100%',
-	borderRadius: '0 10px 10px 0',
-	backgroundColor: '#2e2ac2',
-	border: '0',
-	width: '25px',
-	right: '-24px',
-};
+import { handleStyle } from './style';
+
 
 const FileNode = ({ data }: any) => {
 	const updateNodeInternals = useUpdateNodeInternals();

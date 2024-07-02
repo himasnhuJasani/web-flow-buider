@@ -23,7 +23,7 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <button
       {...res}
-      className={`px-[6px] py-1 hover-transition ${className} ${buttonClasses}`}
+      className={`px-[6px] py-1 ${className} ${buttonClasses}`}
     >
       {children}
     </button>

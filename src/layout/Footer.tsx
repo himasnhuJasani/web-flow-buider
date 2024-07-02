@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './FooterStyle.css';
 import Table from 'components/Table';
 import { useSelector } from 'react-redux';
