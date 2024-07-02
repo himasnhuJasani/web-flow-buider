@@ -2,6 +2,14 @@
 
 Workflow Builder is a user-friendly and dynamic application crafted to enable users to effortlessly construct, modify, and visually represent intricate workflows. Whether handling extensive datasets or complex processes, our tool provides an intuitive drag-and-drop interface for constructing workflows comprising numerous steps (nodes) and their interconnections (edges). From data filtering and retrieval to streamlining and applying diverse array methods, our platform supports saving multiple workflows, ensuring they are retrievable even after reloading.
 
+# Screenshot
+
+<img width="1080" alt="Screenshot 2024-07-02 at 7 46 36 AM" src="https://github.com/himasnhuJasani/web-flow-buider/assets/117925566/7dd601a6-044e-408f-b099-18ea7573b1c2">
+
+<img width="1079" alt="Screenshot 2024-07-02 at 7 47 24 AM" src="https://github.com/himasnhuJasani/web-flow-buider/assets/117925566/d3e9f953-d1bc-4c8a-af20-640bf1f3d00f">
+
+
+
 # Features
 
 -   **Create New Workflow:** Easily create and manage workflows that persist even after reloading.
