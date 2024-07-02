@@ -1,14 +1,13 @@
 import React, { useState } from 'react';
 
 import './TableStyle.css';
-import { ReactComponent as SvgArrow } from 'assets/svg/arrow.svg';
 import { TableRow } from 'store/workflowSlice';
 
 interface TableProps {
 	data: TableRow[];
 }
 
-const Table: React.FC<TableProps> = ({ data }) => {
+const DataTable: React.FC<TableProps> = ({ data }) => {
 	const [sortConfig, setSortConfig] = useState<{
 		key: string;
 		direction: 'ascending' | 'descending';
@@ -51,7 +50,7 @@ const Table: React.FC<TableProps> = ({ data }) => {
 							{Object.keys(data[0]).map((key) => (
 								<th key={key} onClick={() => requestSort(key)}>
 									<div className="table-heading-col">
-										<span>{key}</span> <SvgArrow />
+										<span>{key}</span>
 									</div>
 								</th>
 							))}
@@ -73,4 +72,4 @@ const Table: React.FC<TableProps> = ({ data }) => {
 	);
 };
 
-export default Table;
+export default DataTable;

@@ -8,7 +8,7 @@ import {
   setNodeData,
   setSelectedNodeData,
 } from "store/nodeSlice";
-import Button from "components/Button";
+import Button from "components/CustomButton";
 
 const CsvInput = ({ id }: { id?: string }) => {
   const dispatch = useDispatch();

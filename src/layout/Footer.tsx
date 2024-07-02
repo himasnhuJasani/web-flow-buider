@@ -1,9 +1,9 @@
 import React from 'react';
 import './FooterStyle.css';
-import Table from 'components/Table';
+import Table from 'components/DataTable';
 import { useSelector } from 'react-redux';
 import { RootState } from 'store/store';
-import Button from 'components/Button';
+import Button from 'components/CustomButton';
 import { convertToCSV } from 'utils/convertToCSV';
 import { saveAs } from 'file-saver';
 

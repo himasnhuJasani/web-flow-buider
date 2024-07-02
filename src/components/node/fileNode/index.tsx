@@ -1,4 +1,4 @@
-import Button from 'components/Button';
+import Button from 'components/CustomButton';
 import CsvFileSelectInput from 'components/Form/CsvInput';
 import { useEffect } from 'react';
 import { useDispatch } from 'react-redux';

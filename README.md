@@ -1,46 +1,126 @@
-# Getting Started with Create React App
+# Workflow Builder
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Workflow Builder is a user-friendly and dynamic application crafted to enable users to effortlessly construct, modify, and visually represent intricate workflows. Whether handling extensive datasets or complex processes, our tool provides an intuitive drag-and-drop interface for constructing workflows comprising numerous steps (nodes) and their interconnections (edges). From data filtering and retrieval to streamlining and applying diverse array methods, our platform supports saving multiple workflows, ensuring they are retrievable even after reloading.
 
-## Available Scripts
+# Features
 
-In the project directory, you can run:
+-   **Create New Workflow:** Easily create and manage workflows that persist even after reloading.
+-   **CSV File Integration:** Seamlessly add and handle CSV files within your workflows..
+-   **Node Management:** Two types of nodes available:
 
-### `npm start`
+    -   **File Select Node:** Choose CSV files for integration.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    -   **Filter Node:** Apply filters to manipulate CSV data.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+-   **Drag and Drop:** Intuitively move nodes across the canvas.. 
+-   **Node Connections:** Connect nodes with arrows to establish data flow.
+-   **Data Display:** Click on nodes to view their data outputs below the canvas.
+-   **Export Data:** Export selected node data as CSV files.
+-   **Save Workflow:** Save entire workflows effortlessly, preserving node positions and connections. Accessible via the 'Save Workflow' option in the top-right corner.
 
-### `npm test`
+## Installation
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To install the necessary dependencies, use Node.js v18.18.2 or later, and run:
 
-### `npm run build`
+```bash
+npm install
+```
+git clone https://github.com/himasnhuJasani/web-flow-buider.git
+npm install
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Usage
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+To start the development server, run:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm run start
+```
 
-### `npm run eject`
+## Folder Structure
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Here is an overview of the folder structure of the project:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```bash
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+data/
+└── sample-data.csv
+src/
+├── assets/
+│   └── svg/
+│       └── logo.svg
+├── components/
+│   ├── CustomButton/
+│   │   └── index.tsx
+│   ├── DataTable/
+│   │   ├── index.tsx
+│   │   └── TableStyle.css
+│   ├── Node/
+│   │   ├── FileNode/
+│   │   │   └── index.tsx
+│   │   └── FilterNode/
+│   │       └── index.tsx
+│   └── Form/
+│       ├── CsvInput.tsx
+│       └── CustomInput.tsx
+├── layout/
+│   ├── Footer.tsx
+│   ├── FooterStyle.css
+│   ├── Header.tsx
+│   ├── HeaderStyle.css
+│   ├── BackgroundLayout.tsx
+│   ├── BackgroundLayoutStyle.css
+│   ├── SidePanel.tsx
+│   └── SidePanelStyle.css
+├── pages/
+│   ├── Dashboard/
+│   │   ├── DashboardStyle.css
+│   │   └── index.tsx
+│   └── WorkflowBuilder/
+│       ├── FlowCanvas.tsx
+│       ├── WorkflowBuilder.tsx
+│       └── WorkflowBuilderStyle.css
+├── store/
+│   ├── edgeSlice.ts
+│   ├── nodeSlice.ts
+│   ├── store.ts
+│   └── workflowSlice.ts
+├── utils/
+│   ├── convertToCSV.ts
+│   └── findNestedData.ts
+├── App.tsx
+├── index.css
+├── index.tsx
+├── react-app-env.d.ts
+├── reportWebVitals.ts
+├── setupTests.ts
+├── .gitignore
+├── file-saver.d.ts
+├── package-lock.json
+├── package.json
+├── README.md
+├── tailwind.config.js
+├── tsconfig.json
+└── webpack.config.ts
 
-## Learn More
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Contributing
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+We welcome contributions from the community! Here's how you can get involved:
+
+--Fork the repository.
+--Create a new branch (git checkout -b feature-branch).
+--Make your changes.
+--Commit your changes (git commit -m 'Add new feature').
+--Push to the branch (git push origin feature-branch).
+--Open a Pull Request.
+
+
+```bash
+git checkout -b feature-branch
+git commit -m 'Add new feature'
+git push origin feature-branch
+```
+
+

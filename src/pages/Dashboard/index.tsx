@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./DashboardStyle.css";
-import Button from "components/Button";
+import Button from "components/CustomButton";
 import DynamicInput from "components/Form/CustomInput";
 
 import { useDispatch, useSelector } from "react-redux";

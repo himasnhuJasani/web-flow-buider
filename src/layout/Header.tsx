@@ -1,7 +1,7 @@
 import "./HeaderStyle.css";
 
 import { ReactComponent as Logo } from "assets/svg/logo.svg";
-import Button from "components/Button";
+import Button from "components/CustomButton";
 import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { saveWorkflow } from "store/workflowSlice";

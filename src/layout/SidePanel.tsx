@@ -1,6 +1,6 @@
 import React from "react";
 import "./SidePanelStyle.css";
-import Button from "components/Button";
+import Button from "components/CustomButton";
 import { useDispatch } from "react-redux";
 import { addNode } from "store/nodeSlice";
 

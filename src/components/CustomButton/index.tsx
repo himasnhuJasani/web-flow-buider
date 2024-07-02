@@ -7,7 +7,7 @@ interface ButtonProps {
   onClick?: (e: any) => void;
 }
 
-const Button: React.FC<ButtonProps> = ({
+const CustomButton: React.FC<ButtonProps> = ({
   children,
   variant = "outlet",
   className,
@@ -30,4 +30,4 @@ const Button: React.FC<ButtonProps> = ({
   );
 };
 
-export default Button;
+export default CustomButton;
