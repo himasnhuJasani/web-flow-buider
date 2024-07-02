@@ -23,7 +23,7 @@ const Header = () => {
     <header>
       <div className="navigation">
         <Logo />
-        <ul>
+        <ul className="contents">
           <li>
             <Button
               onClick={() => {
@@ -34,10 +34,10 @@ const Header = () => {
             </Button>
           </li>
           <li>
-						<Button>VIEW</Button>
+						<Button>View</Button>
 					</li>
 					<li>
-						<Button>HELP</Button>
+						<Button>Help</Button>
 					</li>
         </ul>
       </div>
